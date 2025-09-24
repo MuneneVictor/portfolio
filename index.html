@@ -13,7 +13,7 @@
         .main{
             width: 100%;
             height: 100vh;
-            background-image: url(back5.jpg);
+           
             background-position: center;
             background-size: cover;
             position: relative;
@@ -199,10 +199,12 @@
                 text-align: center;
                 font-weight: bold;
                 background-color: black;
+                color: white;
             }
             body{
                 user-select: none;
                 scroll-behavior: smooth;
+                 background-image: url(back5.jpg);
             }         
     </style>
 </head>
@@ -212,11 +214,12 @@
         <img src="this2.png" class="logo">
         <div class="menu-icon" onclick="togglemenu()">&#9776;</div>
         <ul id="navLinks">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SKILLS</a></li>
+            <li><a href="#" onclick="showTab('home')">HOME</a></li>
+            <li><a href="#" onclick="showTab('about')">ABOUT</a></li>
+            <li><a href="#" onclick="showTab('skills')">SKILLS</a></li>
         </ul>
     </div>
+    <div id="home" class="tab-content">
         <div class="image">
         <img src="me.JPG" class="boy">
         <div class="label">
@@ -238,18 +241,80 @@
         <a href="mailto:victormunene207@gmail.com"><i class="fas fa-envelope"></i></a>
         <a href="https://instagram.com/v.de.bruce" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="tel:+254711529618"><i class="fas fa-phone"></i></a>
-        <a href="https://twitter.com/vdebruc" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/https://www.linkedin.com/in/victor-munene-a8459a338" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
  </section>
- <footer><p>© 2025 victormsite. All rights reserved.</p></footer>
+ <footer><p>© 2025 victormsite. All rights reserved.</p></footer> 
+ </div>
+ <div id="about" class="tab-content" style="display: none; font-family: 'Times New Roman', Times, serif; text-align: justify; padding: 20px;">
+     <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: medium; text-decoration: underline; color: orangered;">ABOUT ME</h1>
+    
+    <p>
+      Hi, I’m <strong>Victor Munene</strong> 👋 a passionate Computer Science student,<br> tech enthusiast, and aspiring web developer based in Kenya. <br>  
+      I love exploring how technology can solve everyday <br> problems and create opportunities for people. <br>
+      From building simple websites to experimenting <br>with databases and security, every project is a chance <br>to grow and push my creativity.
+    </p>
+     <br>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: medium; text-decoration: underline; color: orangered;">MY JOURNEY</h1>
+    <p>
+      My journey into tech started with curiosity, <br> breaking down gadgets, wondering how websites worked,<br>
+      and experimenting with little scripts. <br> That curiosity grew into a career path <br>when I joined university to study <br> 
+      <strong>Bachelor of Science in Computer Science</strong> <br>at The Co-operative University of Kenya.   <br>
+      Along the way, I discovered a love for <br><em>web development, database systems, and problem-solving</em>. <br>
+      Every day, I’m learning something new, <br>whether it’s mastering JavaScript functions,<br> improving my Python skills, 
+      or <br>exploring backend frameworks.
+    </p>
+    <br>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: medium; text-decoration: underline; color: orangered;">WHAT I DO</h1>
+    <p>
+      Right now, I focus on <strong>frontend development </strong><br> (HTML, CSS, JavaScript) while steadily building <br> up my 
+      <strong>backend skills</strong> (PHP, MySQL). <br> I’ve created projects like a secure login system, <br>
+      a portfolio website, and mini-apps to <br> sharpen my skills. I enjoy turning ideas into <br> interactive, 
+      user-friendly designs, and then making sure <br>they work smoothly under the hood.  
+    </p>
+    <br>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: medium; text-decoration: underline; color: orangered;">WHAT DRIVES ME</h1>
+    <p>
+      I believe in continuous learning, teamwork, <br>and building solutions that actually matter. <br> 
+      My long-term vision is to use technology <br> to empower young people in Kenya, creating tools <br> that open up opportunities, 
+      spread knowledge, <br>and solve real problems. To me, coding <br>is not just about syntax, 
+      it’s about <em>impact</em>.
+    </p>
+    <br>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: medium; text-decoration: underline; color: orangered;">LET'S CONNECT</h1>
+    <p>
+    I’m always excited to bring fresh ideas, <br> creativity, and technical skills to the table. <br>
+    Whether you’re looking for someone to <br> design a clean, responsive website, <br>collaborate on 
+    innovative projects, <br>or simply share knowledge and experiences, <br> I’d love to connect. 
+    </p> <br>
+    <h2>CONTACT ME</h2>
+    <div class="contact-icons">
+        <a href="mailto:victormunene207@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/v.de.bruce" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+254711529618"><i class="fas fa-phone"></i></a>
+        <a href="https://www.linkedin.com/in/https://www.linkedin.com/in/victor-munene-a8459a338" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <footer style="padding: 0px; align-items: flex-start;"><p>© 2025 victormsite. All rights reserved.</p></footer> 
+ </div>
+ <div id="skills" class="tab-content" style="display: none;">
+<footer><p>© 2025 victormsite. All rights reserved.</p></footer> 
+ </div>
  </div>
  <script>
     function togglemenu(){
         const nav = document.getElementById("navLinks");
         nav.classList.toggle("show");
     }
+     function showTab(tabId) {
+    // hide all tab-content
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.style.display = 'none');
+    
+    // show the clicked one
+    document.getElementById(tabId).style.display = 'block';
+  }
  </script>
-</body>     
+</body>    
 </html>
 
 
