@@ -301,31 +301,25 @@
  </div>
  </div>
  <script>
-    function togglemenu(){
-        const nav = document.getElementById("navLinks");
-        nav.classList.toggle("show");
-    }
-     function showTab(tabId) {
-    // hide all tab-content
+   // Toggle the menu when hamburger (☰) is clicked
+  function togglemenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+
+  // Show a section (Home, About, Skills, Contact)
+  function showTab(tabId) {
+    // Hide all sections
     const tabs = document.querySelectorAll('.tab-content');
     tabs.forEach(tab => tab.style.display = 'none');
-    
-    // show the clicked one
+
+    // Show only the selected section
     document.getElementById(tabId).style.display = 'block';
+
+    // Close the mobile menu after clicking
+    const nav = document.getElementById("navLinks");
+    nav.classList.remove("show");
   }
-    // Select the nav links container
-  const navLinks = document.querySelector('.nav-links');
-  
-  // Select all individual links inside it
-  const links = document.querySelectorAll('.nav-links a');
-  
-  // Loop through each link and add click listener
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      // Remove the 'active' class (hides the menu)
-      navLinks.classList.remove('active');
-    });
-  });
  </script>
 </body>    
 </html>
