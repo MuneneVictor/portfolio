@@ -313,6 +313,19 @@
     // show the clicked one
     document.getElementById(tabId).style.display = 'block';
   }
+    // Select the nav links container
+  const navLinks = document.querySelector('.nav-links');
+  
+  // Select all individual links inside it
+  const links = document.querySelectorAll('.nav-links a');
+  
+  // Loop through each link and add click listener
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      // Remove the 'active' class (hides the menu)
+      navLinks.classList.remove('active');
+    });
+  });
  </script>
 </body>    
 </html>
