@@ -22,18 +22,35 @@
         }
         .navbar{
             display: flex;
-            width: 86%;
+            width: 100%;
             margin: auto;
             padding: 12px 0;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        .navbar::before{
+            content: "";
+            background-color: black;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
        .navbar .logo{
             height: 11vh;
             width: 15vh;
             cursor: pointer;
             margin-left: -2%;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
         }
         ul{
             margin-top: ;
@@ -51,7 +68,7 @@
             color: white;
             justify-content: center;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 20px;
             
         }
          ul li a:hover{
@@ -172,6 +189,7 @@
                 padding: 9px 7px;
                 border-radius: 15px;
                 font-family: 'Times New Roman', Times, serif;
+                color: white;
             }
             #contact {
                 align-items: center;
@@ -205,7 +223,10 @@
                 user-select: none;
                 scroll-behavior: smooth;
                  background-image: url(back5.jpg);
-            }         
+            }
+            .tab-content{
+                color: ;
+            }      
     </style>
 </head>
 <body>
@@ -222,10 +243,7 @@
     <div id="home" class="tab-content">
         <div class="image">
         <img src="me.JPG" class="boy">
-        <div class="label">
-        <h2>VICTOR MUNENE</h2>
-        <p>FrontEnd developer.</p>
-        </div>
+        
       </div>
     <br><br><br><br><br>
        <div class="info">
@@ -235,7 +253,7 @@
             
       </div>
       <br><br><br><br><br><br><br><br>
-<section id="contact">
+<section id="contact" style="color: white;">
     <h2>CONTACT ME</h2>
     <div class="contact-icons">
         <a href="mailto:victormunene207@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -246,7 +264,7 @@
  </section>
  <footer><p>© 2025 victormsite. All rights reserved.</p></footer> 
  </div>
- <div id="about" class="tab-content" style="display: none; font-family: 'Times New Roman', Times, serif; text-align: justify; padding: 20px;">
+ <div id="about" class="tab-content" style="display: none; font-family: 'Times New Roman', Times, serif; text-align: justify; justify-content: left; align-items: center; padding: 30px 0; margin-left: 7%;">
      <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: medium; text-decoration: underline; color: orangered;">ABOUT ME</h1>
     
     <p>
